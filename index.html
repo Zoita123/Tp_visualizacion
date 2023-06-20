@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+  <meta charset="utf-8" />
+  <title>Piano - Coding With Enjoy</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="script.js" defer></script>
+  <script src="script1.js" defer></script>
+
+</head>
+
+<body>
+  <div class="piano visible">
+    <h1>Encontrá la playlist de Fito Paez ideal para vos</h1>
+    <div class="contenedor">
+      <button class="play" onclick="mostrarPiano()"><i class="fas fa-play"></i></button>
+    </div>
+  </div>
+
+  <div class="piano hidden" id="piano_emociones">
+    <h1>Canciones en Sintonía </h1>
+    <h2>El Universo Emocional con Fito Páez como Guía</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+      Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam.</p>
+  <div class="wrapper3">
+    <div class="header3">
+      <h2>¿Cual tecla representa mejor tu estado de ánimo?</h2>
+      <div class="column volume-slider">
+        <span>Volumen</span>
+        <input type="range" id="volumeRange" min="0" max="1" value="0.5" step="any" />
+      </div>
+    </div>
+    <ul class="piano-keys">
+      <li class="key white" data-key="a"><span></span></li>
+      <li class="key black" data-key="w"></li>
+      <li class="key white" data-key="a"><span></span></li>
+      <li class="key black" data-key="e"></li>
+      <li class="key white" data-key="c" onclick="showGraph('canciones2')" id="btn_canciones2" value="canciones2"><span>😁</span></li>
+      <li class="key white" data-key="d" onclick="showGraph('canciones3')" id="btn_canciones3" value="canciones3"><span>🥰</span></li>
+      <li class="key black" data-key="t"></li>
+      <li class="key white" data-key="e" onclick="showGraph('canciones4')" id="btn_canciones4" value="canciones4"><span>😭</span></li>
+      <li class="key black" data-key="y"></li>
+      <li class="key white" data-key="i" onclick="showGraph('canciones5')" id="btn_canciones5" value="canciones5"><span>💔</span></li>
+      <li class="key black" data-key="u"></li>
+      <li class="key white" data-key="g"  onclick="showGraph('canciones6')" id="btn_canciones6" value="canciones6"><span>🥳</span></li>
+      <li class="key white" data-key="h"  onclick="showGraph('canciones')" id="btn_canciones" value="canciones"><span>😡</span></li>
+      <li class="key black" data-key="o"></li>
+      <li class="key white" data-key="f" ><span></span></li>
+      <li class="key black" data-key="p"></li>
+      <li class="key white" data-key=";"><span></span></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="piano hidden" id="piano_canciones">
+  <div class="banner">
+    <h1>😡</h1>
+    <button type="button" onclick="mostrarPiano()"><i class="fas fa-home"></i></button>
+  </div>
+  <div class="canciones">
+    <h2>La Playlist para el <span style="color: red;">enojo</span> es:</h2>
+    <div class="image-grid">
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('1')" id="btn_1" value="canciones">
+          <div class="card">
+            <img src="https://i.discogs.com/7NsEQwgisRKCBSyf3r8_AoZJirCF6XNNDVl6-uj5naY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk1MTE4/MTItMTYzMzc4NzMy/OC05NDY2LmpwZWc.jpeg">
+            <h2>Ciudad de Pobres Corazones</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+  
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('2')" id="btn_2" value="canciones"> 
+          <div class="card">
+            <img src="https://i.discogs.com/uVCvygxEENhXierJsUXbO9wQ2fXlEhkjv-FsKfLRexc/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDQ3/ODQzLTE1MDg4Nzk1/MDEtNDI1Mi5qcGVn.jpeg">
+            <h2>Llueve sobre mojado</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+        
+    
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('3')" id="btn_3" value="canciones">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+            <h2>Trafico en Katmandú</h2>
+            <p>Fito Paez</p>
+          </div> 
+        </button>
+      </div>
+
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('4')" id="btn_4" value="canciones">
+          <div class="card">
+            <img src="https://www.rionegro.com.ar/wp-content/uploads/2023/06/o_1685547103.jpg">
+            <h2>La Balada de Donna Helena</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('5')" id="btn_5" value="canciones">   
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+            <h2>Taquicardia</h2>
+            <p>Fito Paez</p>
+          </div> 
+        </button>
+      </div>
+
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('6')" id="btn_6" value="canciones">
+          <div class="card">
+            <img src="https://i.discogs.com/t2YQ3lQyGHEP9tBw18Tn7HLuC_9XqExjxPrUPyYMuPI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU2NjI1/NjItMTM5OTI2ODE4/Ny03NjAwLmpwZWc.jpeg">
+            <h2>El Diablo de tu Corazon</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="playlist visible" id="playlist_1">
+  <div class="playlist1">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/7NsEQwgisRKCBSyf3r8_AoZJirCF6XNNDVl6-uj5naY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk1MTE4/MTItMTYzMzc4NzMy/OC05NDY2LmpwZWc.jpeg">
+      </div>
+      <div class="col">
+        <h3>Ciudad de Pobres Corazones</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4><span>Año:</span> 2003</h4>
+        <h4><span>Disco:</span> Ciudad de Pobres Corazones</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_2">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/uVCvygxEENhXierJsUXbO9wQ2fXlEhkjv-FsKfLRexc/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDQ3/ODQzLTE1MDg4Nzk1/MDEtNDI1Mi5qcGVn.jpeg">
+      </div>
+      <div class="col">
+        <h3>Llueve sobre mojado</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Enemigos Intimos</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_3">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+      </div>
+      <div class="col">
+        <h3>Trafico en Katmandú</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Enemigos Intimos</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_4">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://www.rionegro.com.ar/wp-content/uploads/2023/06/o_1685547103.jpg">
+      </div>
+      <div class="col">
+        <h3>La Balada de Donna Helena</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: EADDA9223</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_5">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+      </div>
+      <div class="col">
+        <h3>Taquicardia</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Giros</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_6">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/t2YQ3lQyGHEP9tBw18Tn7HLuC_9XqExjxPrUPyYMuPI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU2NjI1/NjItMTM5OTI2ODE4/Ny03NjAwLmpwZWc.jpeg">
+      </div>
+      <div class="col">
+        <h3>El Diablo de tu Corazon</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Giros</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  <div class="graf">
+    <div class="graficos">
+    <div id="chart"></div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  
+</div>
+
+</div>
+
+
+
+<div class="piano hidden" id="piano_canciones2">
+  <div class="banner">
+    <h1>😁</h1>
+  </div>
+  <div class="canciones">
+    <h2>La Playlist que transmite <span style="color: rgb(0, 186, 53);">felicidad</span> es: </h2>
+    <div class="image-grid">
+      <div class="image-container feliz">
+        <button type="button" onclick="showGraph2('12')" id="btn_12" value="canciones">
+          <div class="card">
+            <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
+            <h2>Dale Alegría a mi Corazón</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container">
+        <button type="button" onclick="showGraph2('22')" id="btn_22" value="canciones">          
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+            <h2>A Rodar mi Vida</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+    
+      <div class="image-container">
+        <button type="button" onclick="showGraph2('32')" id="btn_32" value="canciones">        
+          <div class="card">
+            <img src="https://i.discogs.com/ZQdL3N-lcEipd8-B-teW7x32BHSsT69Ygt_SvMnT4XY/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMTA3/MTI4LTE1NDgxNzYx/NDMtMzY5NC5qcGVn.jpeg">
+            <h2>Dar es Dar</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+      <div class="image-container">
+        <button type="button" onclick="showGraph2('42')" id="btn_42" value="canciones">        
+          <div class="card">
+            <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
+            <h2>Dos días en la vida</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+      <div class="image-container">
+        <button type="button" onclick="showGraph2('52')" id="btn_52" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Circo_Beat_Album_Cover.jpg">
+            <h2>Mariposa Tecnicolor</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container">
+        <button type="button" onclick="showGraph2('62')" id="btn_62" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Circo_Beat_Album_Cover.jpg">
+            <h2>Tema de Piluso</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+    </div>
+    
+
+  </div>
+
+  
+  <div class="playlist visible" id="playlist_12">
+  <div class="playlist1">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
+      </div>
+      <div class="col">
+        <h3>Dale Alegria a mi Corazon</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Tercer Mundo</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_22">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+      </div>
+      <div class="col">
+        <h3>A rodar mi vida</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: El amor despues del amor </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="playlist hidden" id="playlist_32">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/ZQdL3N-lcEipd8-B-teW7x32BHSsT69Ygt_SvMnT4XY/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMTA3/MTI4LTE1NDgxNzYx/NDMtMzY5NC5qcGVn.jpeg">
+      </div>
+      <div class="col">
+        <h3>Dar es Dar</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Euforia </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_42">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
+      </div>
+      <div class="col">
+        <h3>Dos dias en la vida</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Abre </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_52">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Circo_Beat_Album_Cover.jpg">
+      </div>
+      <div class="col">
+        <h3>Mariposa Tecnicolor</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Circo Beat </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_62">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Circo_Beat_Album_Cover.jpg">
+      </div>
+      <div class="col">
+        <h3>Tema de Piluso</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Circo Beat</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  <div class="graf">
+    <div class="graficos">
+    <div id="chart"></div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  
+</div>
+
+</div>
+
+
+<div class="piano hidden" id="piano_canciones3">
+  <div class="banner">
+    <h1>🥰</h1>
+  </div>
+  <div class="canciones">
+    <!--<button type="button" onclick="showGraph('emociones')" id="btn_emociones" value="emociones">aca</button>-->
+    <h2>Playlist si estas <spam style="color: rgb(223, 110, 206);">enamorado/a</spam> es:</h2>
+    <div class="image-grid">
+      <div class="image-container_enamorado">
+        <button type="button" onclick="showGraph2('13')" id="btn_13" value="canciones">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+            <h2>11 y 6</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_enamorado">
+        <button type="button" onclick="showGraph2('23')" id="btn_23" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+            <h2>El amor después del amor</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+    
+      <div class="image-container_enamorado">
+        <button type="button" onclick="showGraph2('33')" id="btn_33" value="canciones">        
+          <div class="card">
+            <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
+            <h2>Dos en la Ciudad</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_enamorado">
+        <button type="button" onclick="showGraph2('43')" id="btn_43" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+            <h2>Tu encanto</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_enamorado">
+        <button type="button" onclick="showGraph2('53')" id="btn_53" value="canciones">        
+          <div class="card">
+            <img src="https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/8c/0a/78/8c0a785e-0217-e678-4828-17a42985df32/195497237494.jpg/600x600bf-60.jpg">
+            <h2>Tu Vida en Mi Vida</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_enamorado">
+        <button type="button" onclick="showGraph2('63')" id="btn_63" value="canciones">        
+          <div class="card">
+            <img src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/11/23101039/fito-paez-tapa-disco.jpg">
+            <h2>Trafico en Katmandú</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+    </div>
+    
+
+  </div>
+  
+  <div class="playlist visible" id="playlist_13">
+  <div class="playlist1">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+      </div>
+      <div class="col">
+        <h3>11 y 6</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Giros </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_23">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+      </div>
+      <div class="col">
+        <h3>El amor despues del amor</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: El amor despues del amor</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_33">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
+      </div>
+      <div class="col">
+        <h3>Dos en la Ciudad</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Abre </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_43">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+      </div>
+      <div class="col">
+        <h3>Tumbas de Gloria</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: El amor despues del amor </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_53">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/8c/0a/78/8c0a785e-0217-e678-4828-17a42985df32/195497237494.jpg/600x600bf-60.jpg">
+      </div>
+      <div class="col">
+        <h3>Tu Encanto</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Sencillo. Feat: Conociendo Rusia</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_63">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/11/23101039/fito-paez-tapa-disco.jpg">
+      </div>
+      <div class="col">
+        <h3>Tu Vida en Mi Vida</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: La Ciudad Liberada</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  <div class="graf">
+    <div class="graficos">
+    <div id="chart"></div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+  </div>
+</div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  
+</div>
+
+</div>
+
+
+<div class="piano hidden" id="piano_canciones4">
+  <div class="banner">
+    <h1>😭</h1>
+  </div>
+  <div class="canciones">
+    <h2>La Playlist si estas <spam style="color: rgb(85, 183, 240);">triste - melancolico/a</spam> es:</h2>
+    <div class="image-grid">
+      <div class="image-container_triste">
+        <button type="button" onclick="showGraph2('14')" id="btn_14" value="canciones">        
+          <div class="card">
+            <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
+            <h2>Al lado del camino</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_triste">
+        <button type="button" onclick="showGraph2('24')" id="btn_24" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+            <h2>Cable a Tierra</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+    
+      <div class="image-container_triste">
+        <button type="button" onclick="showGraph2('34')" id="btn_34" value="canciones">        
+          <div class="card">
+            <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
+            <h2>Fue Amor</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_triste">
+        <button type="button" onclick="showGraph2('44')" id="btn_44" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+            <h2>Rueda Mágica</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_triste">
+        <button type="button" onclick="showGraph2('54')" id="btn_54" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+            <h2>Yo vengo a ofrecer mi corazón</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_triste">
+        <button type="button" onclick="showGraph2('64')" id="btn_64" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+            <h2>Brillante Sobre el Mic</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="playlist visible" id="playlist_14">
+  <div class="playlist1">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
+      </div>
+      <div class="col">
+        <h3>Al lado del camino</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Abre</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_24">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+      </div>
+      <div class="col">
+        <h3>Cable a Tierra</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Giros</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="playlist hidden" id="playlist_34">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
+      </div>
+      <div class="col">
+        <h3>Fue Amor</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Tercer Mundo </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_44">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+      </div>
+      <div class="col">
+        <h3>Rueda Magica</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: El amor despues del amor </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_54">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+      </div>
+      <div class="col">
+        <h3>Yo vengo a ofrecer mi corazon</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Giros</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_64">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+      </div>
+      <div class="col">
+        <h3>Brillante Sobre el Mic</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: El Amor despues del Amor</h4>
+      </div>
+    </div>
+  </div>
+</div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  <div class="graf">
+    <div class="graficos">
+    <div id="chart"></div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  
+</div>
+
+</div>
+
+
+<div class="piano hidden" id="piano_canciones5">
+  <div class="banner">
+    <h1>💔</h1>
+  </div>
+  <div class="canciones">
+    <h2>Para <spam style="color: rgb(227, 26, 36);">corazones rotos</spam> la Playlist recomendada es:</h2>
+    <div class="image-grid">
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('15')" id="btn_15" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+            <h2>Cable a Tierra</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('25')" id="btn_25" value="canciones">        
+          <div class="card">
+            <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
+            <h2>Fue Amor</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+    
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('35')" id="btn_35" value="canciones"> 
+          <div class="card">
+            <img src="https://www.rionegro.com.ar/wp-content/uploads/2023/06/o_1685547103.jpg">
+            <h2>La Veronica</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('45')" id="btn_45" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Fitopaez_del63.jpg">
+            <h2>Tres Agujas</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('55')" id="btn_55" value="canciones">        
+          <div class="card">
+            <img src="https://m.media-amazon.com/images/I/810NI2wLC6L._UF1000,1000_QL80_.jpg">
+            <h2>Si es Amor</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_roto">
+        <button type="button" onclick="showGraph2('65')" id="btn_65" value="canciones">        
+          <div class="card">
+            <img src="https://m.media-amazon.com/images/I/81dIl26xqeL._UF894,1000_QL80_.jpg">
+            <h2>Los Años Salvajes</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="playlist visible" id="playlist_15">
+  <div class="playlist1">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+      </div>
+      <div class="col">
+        <h3>Cable a Tierra</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Giros </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_25">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
+      </div>
+      <div class="col">
+        <h3>Fue Amor</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Tercer mundo</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="playlist hidden" id="playlist_35">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://www.rionegro.com.ar/wp-content/uploads/2023/06/o_1685547103.jpg">      </div>
+      <div class="col">
+        <h3>La Veronica</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: EADDA9223 </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_45">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Fitopaez_del63.jpg">
+      </div>
+      <div class="col">
+        <h3>Tres Agujas</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Del 63 </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_55">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://m.media-amazon.com/images/I/810NI2wLC6L._UF1000,1000_QL80_.jpg">
+      </div>
+      <div class="col">
+        <h3>Si es Amor</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Rodolfo</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_65">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://m.media-amazon.com/images/I/81dIl26xqeL._UF894,1000_QL80_.jpg">
+      </div>
+      <div class="col">
+        <h3>Los Años Salvajes</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Los Años Salvajesr</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  <div class="graf">
+  <img src="https://www.zohowebstatic.com/sites/default/files/column-chart.jpg">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  
+</div>
+
+</div>
+
+<div class="piano hidden" id="piano_canciones6">
+  <h1> </h1>
+  <div class="banner">
+    <h1>🥳</h1>
+  </div>
+  <div class="canciones">
+    <h2>Si queres  <spam style="color: rgb(167, 26, 227);">bailar</spam> la Playlist recomendada es:</h2>
+    <div class="image-grid">
+      <div class="image-container_fiesta">
+        <button type="button" onclick="showGraph2('16')" id="btn_2" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+            <h2>A Rodar mi Vida</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_fiesta">
+        <button type="button" onclick="showGraph2('26')" id="btn_2" value="canciones">        
+          <div class="card">
+            <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
+            <h2>Dos días en la Vida</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_fiesta">
+        <button type="button" onclick="showGraph2('36')" id="btn_2" value="canciones"> 
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Circo_Beat_Album_Cover.jpg">
+            <h2>Circo Beat</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_fiesta">
+        <button type="button" onclick="showGraph2('46')" id="btn_2" value="canciones">        
+          <div class="card">
+            <img src="https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/8c/0a/78/8c0a785e-0217-e678-4828-17a42985df32/195497237494.jpg/600x600bf-60.jpg">
+            <h2>Tu Encanto</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_fiesta">
+        <button type="button" onclick="showGraph2('56')" id="btn_2" value="canciones">        
+          <div class="card">
+            <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
+            <h2>Dale Alegría a mi Corazón</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+      <div class="image-container_fiesta">
+        <button type="button" onclick="showGraph2('66')" id="btn_2" value="canciones">        
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+            <h2>Giros</h2>
+            <p>Fito Paez</p>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="playlist visible" id="playlist_16">
+  <div class="playlist1">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+      </div>
+      <div class="col">
+        <h3>A Rodar mi Vida</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: El Amor despues del Amor</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_26">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
+      </div>
+      <div class="col">
+        <h3>Dos dias en la Vida</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Abre</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="playlist hidden" id="playlist_36">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Circo_Beat_Album_Cover.jpg">
+      </div>
+      <div class="col">
+        <h3>Circo Beat</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Circo Beat </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_46">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/8c/0a/78/8c0a785e-0217-e678-4828-17a42985df32/195497237494.jpg/600x600bf-60.jpg">
+      </div>
+      <div class="col">
+        <h3>Tu Encanto</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Sencillo. Feat: Conociendo Rusia </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_56">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
+      </div>
+      <div class="col">
+        <h3>Dale Alegria a mi Corazón</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Tercer Mundo</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="playlist hidden" id="playlist_66">
+  <div class="playlist2">
+    <div class="row">
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+      </div>
+      <div class="col">
+        <h3>Giros</h3>
+        <div class="progress-bar">
+          <input type="range" id="progressInput" min="0" max="100" value="0" step="0.01" oninput="seekAudio()">
+        </div>
+        <button type="button" class="button play" onclick="toggleAudio()">| |</button>
+        <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
+        <h4>Año: </h4>
+        <h4>Disco: Giros</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  <div class="graf">
+    <div class="graficos">
+    <div id="chart"></div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  
+</div>
+
+</div>
+
+
+
+
+
+  <script>
+
+    function showGraph(btn){
+      Array.prototype.slice.call( document.getElementsByClassName("piano")).forEach((m)=>{
+        m.classList.remove("visible")
+        m.classList.add("hidden")
+      })
+
+      var id_piano = "piano_" + btn
+      var miPiano = document.getElementById(id_piano)
+      console.log(miPiano)
+      
+      miPiano.classList.remove("hidden")
+      miPiano.classList.add("visible")
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function mostrarPiano() {
+      Array.prototype.slice.call( document.getElementsByClassName("piano")).forEach((m)=>{
+        m.classList.remove("visible")
+        m.classList.add("hidden")
+      })
+      var piano = document.getElementById("piano_emociones");
+      piano.classList.remove("hidden");
+    }
+
+    function showGraph2(btn){
+      Array.prototype.slice.call( document.getElementsByClassName("playlist")).forEach((m)=>{
+        m.classList.remove("visible")
+        m.classList.add("hidden")
+        audio.src = `tunes/playlist_${m}.mp3`
+        if(!audio.paused) {
+          audio.stop();
+        }
+        audio.src = `canciones/playlist_${btn}.mp3`
+        audio.play();
+      })
+
+      var id_piano = "playlist_" + btn
+      var miPiano = document.getElementById(id_piano)
+      console.log(miPiano)
+      
+      miPiano.classList.remove("hidden")
+      miPiano.classList.add("visible")
+
+      //document.querySelector("#playlist_${btn}").scrollIntoView({behavior: 'smooth'}, true)
+      var element = document.getElementById(btn);
+      element.scrollIntoView({ behavior: 'smooth' },true);
+  }
+
+  function playAudio() {
+    audio.play();
+  }
+
+  function toggleAudio() {
+    if (audio.paused) {
+      audio.play(); // Reanuda la reproducción si está en pausa
+      updateProgressBar();
+    } else {
+      audio.pause(); // Pausa la reproducción si está en curso
+    }
+  }
+
+  var progressInput = document.getElementById('progressInput');
+
+  function seekAudio() {
+    var seekTime = (progressInput.value / 100) * audio.duration;
+    audio.currentTime = seekTime;
+  }
+
+  function updateProgressBar() {
+    var progress = (audio.currentTime / audio.duration) * 100;
+    progressInput.value = progress;
+    requestAnimationFrame(updateProgressBar);
+  }
+
+  var volumeRange = document.getElementById("volumeRange");
+
+  volumeRange.addEventListener("input", function() {
+  audio.volume = volumeRange.value;
+  });
+  
+  </script>
+</body>
+
+</html>
+
+<!-- PORTADAS DE ALBUM
+CIRCO BEAT:
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Circo_Beat_Album_Cover.jpg">
+
+EL AMOR DESPUES DEL AMOR:
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
+EUFORIA:
+        <img src="https://i.discogs.com/ZQdL3N-lcEipd8-B-teW7x32BHSsT69Ygt_SvMnT4XY/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMTA3/MTI4LTE1NDgxNzYx/NDMtMzY5NC5qcGVn.jpeg">
+ABRE:
+        <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
+TERCER MUNDO:
+        <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
+GIROS:
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
+SENCILLO:
+        <img src="https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/8c/0a/78/8c0a785e-0217-e678-4828-17a42985df32/195497237494.jpg/600x600bf-60.jpg">
+LA CIUDAD LIBERADA:
+        <img src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/11/23101039/fito-paez-tapa-disco.jpg">
+ENEMIGOS INTIMOS:
+        <img src="https://i.discogs.com/uVCvygxEENhXierJsUXbO9wQ2fXlEhkjv-FsKfLRexc/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDQ3/ODQzLTE1MDg4Nzk1/MDEtNDI1Mi5qcGVn.jpeg">
+CIUDAD DE POBRES CORAZONES:
+        <img src="https://i.discogs.com/7NsEQwgisRKCBSyf3r8_AoZJirCF6XNNDVl6-uj5naY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk1MTE4/MTItMTYzMzc4NzMy/OC05NDY2LmpwZWc.jpeg">
+EADDA9223:
+        <img src="https://www.losandes.com.ar/resizer/rvEwtUeSJBdnHnmEuMxFu1nZC0U=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/XW64WPEREJFA7MGEQVGOJNREQE.jpg">
+REY SOL:
+        <img src="https://i.discogs.com/t2YQ3lQyGHEP9tBw18Tn7HLuC_9XqExjxPrUPyYMuPI/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU2NjI1/NjItMTM5OTI2ODE4/Ny03NjAwLmpwZWc.jpeg">
+DEL 63:
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Fitopaez_del63.jpg">
+RODOLFO:
+        <img src=https://m.media-amazon.com/images/I/810NI2wLC6L._UF1000,1000_QL80_.jpg">
+LOS AÑOS SALVAJES:
+        <img src="https://m.media-amazon.com/images/I/81dIl26xqeL._UF894,1000_QL80_.jpg">
+

@@ -1,0 +1,874 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display:inline-block;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #080808;
+  width: 100%;
+}
+
+.contenedor{
+  width: 100%;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor button{
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  border-radius: 50%;
+  outline: none;
+  background: transparent;
+  transition: 0.7s;
+  align-items: center;
+}
+
+.contenedor button i{
+  margin-left: 20px;
+  font-size: 80px;
+}
+
+.contenedor button:hover{
+  cursor: pointer;
+}
+
+.contenedor button.play{
+  border: 3px solid rgb(20, 125, 156);
+  color: rgb(20, 125, 156);
+}
+
+.contenedor button.play:hover{
+  box-shadow: 0px 0px 57px 8px rgb(20, 125, 156);
+}
+
+h1{
+  margin-top: 3%;
+  text-align: center;
+  color: white;
+}
+
+.piano h1{
+  font-size: 60px;
+  margin-bottom: 1%;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 3%;
+  font-size:30px ;
+  color: white;
+}
+
+p{
+  text-align: justify;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 3%;
+  color: white;
+}
+
+.wrapper1 {
+  width: 60%;
+  margin-left: 20%;
+  align-items: center;
+  padding: 35px 40px;
+  border-radius: 20px;
+  background: #141414;
+}
+
+.wrapper1 header {
+  display: flex;
+  color: #b2b2b2;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction:column;
+}
+
+.wrapper1 header h2 {
+  text-align:center;
+  font-size: 1.6rem;
+}
+
+.wrapper2 {
+  width: 60%;
+  margin-left: 20%;
+  align-items: center;
+  padding: 35px 40px;
+  border-radius: 20px;
+  background: #141414;
+}
+
+.wrapper2 header {
+  display: flex;
+  color: #b2b2b2;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.wrapper3 {
+  width: 60%;
+  margin-left: 20%;
+  align-items: center;
+  padding: 35px 40px;
+  border-radius: 20px;
+  background: #141414;
+  margin-bottom: 5%;
+}
+
+.header3 {
+  display: inline-block;
+  color: #b2b2b2;
+  align-items: center;
+  justify-content: center;
+  /* flex-directon = column */
+}
+
+.header3 h2 {
+  font-size: 1.6rem;
+}
+
+
+.header3 .column {
+  display: flex;
+  align-items: center;
+}
+
+.header3 span {
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 1.08rem;
+}
+
+.header3 input {
+  outline: none;
+  border-radius: 30px;
+}
+
+.volume-slider input {
+  accent-color: #fff;
+}
+
+
+.keys-checkbox input {
+  height: 30px;
+  width: 60px;
+  cursor: pointer;
+  appearance: none;
+  position: relative;
+  background: #4b4b4b;
+}
+
+.keys-checkbox input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #8c8c8c;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+  left: 35px;
+  background: #fff;
+}
+
+.piano-keys {
+  display: flex;
+  list-style: none;
+  margin-top: 40px;
+  margin-left: 7%;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .black {
+  z-index: 2;
+  width: 44px;
+  height: 140px;
+  margin: 0 -22px 0 -22px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+
+ .piano-keys .black.active {
+  box-shadow: inset -5px -10px 10px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+}
+
+ .piano-keys .white {
+  height: 230px;
+  width: 70px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+
+.piano-keys .white2 {
+  height: 200px;
+  width: 200px;
+}
+
+ .piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+}
+
+
+
+ .piano-keys .key span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #a2a2a2;
+  font-size: 2rem;
+  text-align: center;
+}
+
+ .piano-keys .key.hide span {
+  display: none;
+}
+
+ .piano-keys .black span {
+  bottom: 13px;
+  color: #888888;
+}
+
+
+@media screen and (max-width: 815px) {
+  .wrapper {
+    padding: 25px;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  header :where(h2, .column) {
+    margin-bottom: 13px;
+  }
+
+  .volume-slider input {
+    max-width: 100px;
+  }
+
+  .piano-keys {
+    margin-top: 20px;
+  }
+
+  .piano-keys .key:where(:nth-child(9), :nth-child(10)) {
+    display: none;
+  }
+
+  .piano-keys .black {
+    height: 100px;
+    width: 40px;
+    margin: 0 -20px 0 -20px;
+  }
+
+  .piano-keys .white {
+    height: 180px;
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .piano-keys .key:nth-child(13),
+  .piano-keys .key:nth-child(14),
+  .piano-keys .key:nth-child(15),
+  .piano-keys .key:nth-child(16),
+  .piano-keys .key :nth-child(17) {
+    display: none;
+  }
+  
+  .piano-keys .white {
+    width: 50px;
+  }
+}
+
+
+
+.visible{
+  display: block;
+  animation: appear 1s ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.hidden{
+   display: none;
+}
+
+#btn_anios {
+  display: none;
+}
+
+#btn_emociones {
+  display: none;
+}
+
+
+
+
+.playlist .row{
+  margin-top: 7%;
+  margin-bottom: 7%;
+  display: flex;
+  align-items: center;
+  
+}
+
+.playlist .col{
+  height: 250px;
+  margin-left: 4%;
+}
+
+.playlist .col img{
+  width: 250px;
+  height: 250px;
+  margin-left: 10px;
+  text-align:left;
+} 
+
+.playlist h2{
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: -3%;
+  margin-left: -4%;
+  
+}
+
+.playlist h3{
+  margin-left: 35px;
+  color: #fff;
+  font-size: 25px;
+  margin-left: -2%;
+  margin-bottom: 5px;
+}
+.playlist h4{
+  margin-left: 35px;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: -2%;
+}
+
+
+
+.playlist button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 400px;
+  margin-top: 10px;
+}
+
+.playlist .playlist.button.pause {
+  background-color: #4CAF50;
+  
+}
+
+.playlist .atras {
+  background-color: #eaeaea;
+  color:#000;
+}
+
+
+
+.playlist .button.play {
+  background-color: #f44336;
+  margin-left: 35px;
+}
+
+.playlist .playlist.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.playlist progress-bar input[type="range"] {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+}
+
+.playlist .progress-bar input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+  
+}
+
+.canciones {
+  width: 90%;
+  margin-left: 5%;
+  padding: 35px 40px;
+  border-radius: 20px;
+  margin-top: 5%;
+}
+
+
+.canciones .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.canciones .image-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+}
+
+
+.canciones  .image-container {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.canciones  .image-container button{
+  background: none;
+  border: none;
+}
+
+.canciones .card{
+  background-color: #181818;
+  border-radius: 3px;
+  padding: 1.6rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .2);
+  transition: background-color .5s ease;
+  cursor: pointer;
+  position: relative;
+  height: 310px;
+}
+
+.card:hover{
+  background-color: #282828;
+}
+
+
+.canciones  .image-container img {
+  width: 100%;
+  border-radius: 3px;
+  margin: none;
+  height: auto;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.canciones  .image-container h2{
+  font-family: "Rubik";
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 17px;
+  margin-left: 2px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+.canciones  .image-container p{
+  font-family: "Rubik";
+  font-size: 15px;
+  color: #b3b3b3;
+  font-weight: 400;
+  line-height: 0.8;
+  margin-left: 2px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.canciones  .image-container:hover  {
+  box-shadow: 0px 0px 15px 8px #4CAF50;
+  border-radius: 3px;
+}
+
+.canciones  .image-container:hover img {
+  transform: translateY(-5px);
+}
+
+.canciones  .image-container_enamorado {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.canciones  .image-container_enamorado button{
+  background: none;
+  border: none;
+}
+
+.canciones  .image-container_enamorado img {
+  width: 100%;
+  border-radius: 3px;
+  margin: none;
+  height: auto;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.canciones  .image-container_enamorado h2{
+  font-family: "Rubik";
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 17px;
+  margin-left: 2px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+.canciones  .image-container_enamorado p{
+  font-family: "Rubik";
+  font-size: 15px;
+  color: #b3b3b3;
+  font-weight: 400;
+  line-height: 0.8;
+  margin-left: 2px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.canciones  .image-container_enamorado:hover  {
+  box-shadow: 0px 0px 15px 8px #e282e8;
+  border-radius: 3px;
+}
+
+.canciones  .image-container_enamorado:hover img {
+  transform: translateY(-5px);
+}
+
+
+.canciones  .image-container_triste {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.canciones  .image-container_triste button{
+  background: none;
+  border: none;
+}
+
+.canciones  .image-container_triste img {
+  width: 100%;
+  border-radius: 3px;
+  margin: none;
+  height: auto;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.canciones  .image-container_triste h2{
+  font-family: "Rubik";
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 17px;
+  margin-left: 2px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+.canciones  .image-container_triste p{
+  font-family: "Rubik";
+  font-size: 15px;
+  color: #b3b3b3;
+  font-weight: 400;
+  line-height: 0.8;
+  margin-left: 2px;
+  overflow: hidden;
+  text-align: left;
+}
+
+
+.canciones  .image-container_triste:hover  {
+  box-shadow: 0px 0px 15px 8px #4d9bf4;
+  border-radius: 3px;
+}
+
+.canciones  .image-container_triste:hover img {
+  transform: translateY(-5px);
+}
+
+
+.canciones  .image-container_roto {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.canciones  .image-container_roto button{
+  background: none;
+  border: none;
+}
+
+.canciones  .image-container_roto img {
+  width: 100%;
+  border-radius: 3px;
+  margin: none;
+  height: auto;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.canciones  .image-container_roto h2{
+  font-family: "Rubik";
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 17px;
+  margin-left: 2px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+.canciones  .image-container_roto p{
+  font-family: "Rubik";
+  font-size: 15px;
+  color: #b3b3b3;
+  font-weight: 400;
+  line-height: 0.8;
+  margin-left: 2px;
+  overflow: hidden;
+  text-align: left;
+}
+
+
+.canciones  .image-container_roto:hover  {
+  box-shadow: 0px 0px 15px 8px #dd1f1f;
+  border-radius: 3px;
+}
+
+.canciones  .image-container_roto:hover img {
+  transform: translateY(-5px);
+}
+
+
+.canciones  .image-container_fiesta {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.canciones  .image-container_fiesta button{
+  background: none;
+  border: none;
+}
+
+.canciones  .image-container_fiesta img {
+  width: 100%;
+  border-radius: 3px;
+  margin: none;
+  height: auto;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.canciones  .image-container_fiesta h2{
+  font-family: "Rubik";
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 17px;
+  margin-left: 2px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+.canciones  .image-container_fiesta p{
+  font-family: "Rubik";
+  font-size: 15px;
+  color: #b3b3b3;
+  font-weight: 400;
+  line-height: 0.8;
+  margin-left: 2px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.canciones  .image-container_fiesta:hover  {
+  box-shadow: 0px 0px 15px 8px #a218e7;
+  border-radius: 3px;
+}
+
+.canciones  .image-container_fiesta:hover img {
+  transform: translateY(-5px);
+}
+
+.canciones h2{
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+}
+.canciones h4{
+  margin-left: 35px;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+
+
+
+.piano  p{
+  margin-top: 3%;
+}
+
+.piano .graf img{
+  margin-left: 30%;
+  height: 500px;
+  width: 500px;
+}
+
+.piano .container {
+  display: flex;
+}
+
+.piano  .sidebar {
+  width: 200px; /* Ancho de la barra lateral */
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Altura de la barra lateral */
+  background-color: #f1f1f1; /* Color de fondo de la barra lateral */
+  padding: 20px; /* Espacio interno de la barra lateral */
+}
+
+.piano  .main-content {
+  flex-grow: 1;
+  padding: 20px; /* Espacio interno del contenido principal */
+}
+
+.playlist {
+  width: 85%;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  padding: 2px 20px;
+  border-radius: 20px;
+  margin-top: 60px;
+  background: #141414;
+}
+
+.playlist img{
+  width: 250px;
+  height: 250px;
+}
+
+.volume-slider-canciones{
+  margin-top: 5%;
+  margin-left: -10px;
+}
+
+span{
+  color: #fffafa;
+}
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  text-align: center;
+  z-index: 9999;
+  height: 20%;
+  margin-top: 10px;
+}
+
+.banner h1{
+  text-align: left;
+  position: fixed;
+  margin-left: 20px;
+  background-color: transparent;
+  padding: 10px;
+  margin-top: -1%;
+}
+
+.banner button{
+  margin-left: 80%;
+  color: white;
+  text-align: right;
+  background-color: transparent;
+  outline: none;
+}
+
+.banner button i{
+  width: 60px;
+  height: 60px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 50%; /* Ajusta la posición vertical según tus necesidades */
+  right: 0;
+  width: 20%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.show {
+  opacity: 1;
+}
+
+.banner2 {
+  position:sticky;
+  top: 0;
+  left: 0;
+  width: 5%;
+  background-color: transparent;
+  padding: 10px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.graficos {
+  margin-top: 5%;
+  color: rgb(238, 92, 92);
+  margin-bottom: 2%;
+  margin-left: 20%;
+}

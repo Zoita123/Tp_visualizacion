@@ -1,7 +1,5 @@
 d3.dsv(",", "thisisfito.csv", d3.autoType).then((data) => {
-    // Multiplicar los valores de "energy" por 5
   
-    // Generar la visualización del gráfico
     let chart = Plot.plot({
       marks: [
         Plot.dot(data, {

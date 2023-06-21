@@ -25,6 +25,7 @@ body {
   justify-content: center;
 }
 
+
 .contenedor button{
   width: 200px;
   height: 200px;
@@ -46,12 +47,12 @@ body {
 }
 
 .contenedor button.play{
-  border: 3px solid rgb(20, 125, 156);
-  color: rgb(20, 125, 156);
+  border: 3px solid rgb(3, 171, 64);
+  color: rgb(3, 158, 36);
 }
 
 .contenedor button.play:hover{
-  box-shadow: 0px 0px 57px 8px rgb(20, 125, 156);
+  box-shadow: 0px 0px 100px 8px rgb(4, 179, 68);
 }
 
 h1{
@@ -61,7 +62,7 @@ h1{
 }
 
 .piano h1{
-  font-size: 60px;
+  font-size: 40px;
   margin-bottom: 1%;
 }
 
@@ -193,8 +194,8 @@ p{
 .piano-keys {
   display: flex;
   list-style: none;
-  margin-top: 40px;
-  margin-left: 7%;
+  margin-top: 2%;
+  margin-left: 2%;
 }
 
 .piano-keys .key {
@@ -742,16 +743,15 @@ p{
 .canciones h2{
   text-align: center;
   color: #fff;
-  font-size: 25px;
+  font-size: 35px;
 }
+
 .canciones h4{
   margin-left: 35px;
   color: #fff;
   font-size: 15px;
   margin-top: 10px;
 }
-
-
 
 
 .piano  p{
@@ -788,7 +788,7 @@ p{
   margin-right: 7.5%;
   padding: 2px 20px;
   border-radius: 20px;
-  margin-top: 60px;
+  margin-top: 30px;
   background: #141414;
 }
 

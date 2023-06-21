@@ -9,13 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <script src="script.js" defer></script>
-  <script src="script1.js" defer></script>
 
 </head>
 
 <body>
   <div class="piano visible">
     <h1>Encontrá la playlist de Fito Paez ideal para vos</h1>
+    <!-- <img src="https://media.ambito.com/p/b45bfbc36cbaaf35a15d4993c543ca00/adjuntos/239/imagenes/040/741/0040741353/1200x675/smart/fito-paezjpg.jpg"> -->
     <div class="contenedor">
       <button class="play" onclick="mostrarPiano()"><i class="fas fa-play"></i></button>
     </div>
@@ -24,15 +24,10 @@
   <div class="piano hidden" id="piano_emociones">
     <h1>Canciones en Sintonía </h1>
     <h2>El Universo Emocional con Fito Páez como Guía</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-      Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam.</p>
+    <p>¡Bienvenido a nuestra página web de música emocional! Elige una emoción en nuestro teclado interactivo y te proporcionaremos una playlist personalizada que se ajuste a tu estado de ánimo. Descubre la música perfecta para cada momento de tu vida. ¡Disfruta de una experiencia auditiva emocionante y única!</p>
   <div class="wrapper3">
     <div class="header3">
       <h2>¿Cual tecla representa mejor tu estado de ánimo?</h2>
-      <div class="column volume-slider">
-        <span>Volumen</span>
-        <input type="range" id="volumeRange" min="0" max="1" value="0.5" step="any" />
-      </div>
     </div>
     <ul class="piano-keys">
       <li class="key white" data-key="a"><span></span></li>
@@ -256,6 +251,17 @@
     <div id="chart"></div>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="script1.js" defer></script>
+
+  </div>
+
+  <div class="graf">
+    <div class="graficos">
+    <div id="chart2"></div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="script2.js" defer></script>
+
   </div>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>

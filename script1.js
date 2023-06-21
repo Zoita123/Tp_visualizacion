@@ -4,15 +4,15 @@ d3.dsv(",", "thisisfito.csv", d3.autoType).then((data) => {
       marks: [
         Plot.dot(data, {
           x: "popularity",
-          y: "tempo",
+          y: "energy",
           stroke: "album",
-          r: "energy",
+          r: "tempo",
           channels: { name: "song", album: "album" },
           tip: true,
         }),
         Plot.crosshair(data, {
           x: "popularity",
-          y: "tempo",
+          y: "energy",
           color: "album",
           opacity: 0.5,
         }),

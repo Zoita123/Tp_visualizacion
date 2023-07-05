@@ -14,15 +14,15 @@
 
 <body>
   <div class="piano visible">
-    <h1>Encontrá la playlist de Fito Paez ideal para vos</h1>
     <div class="contenedor">
+      <h1> </h1>
       <button class="play" onclick="mostrarPiano()"><i class="fas fa-play"></i></button>
     </div>
   </div>
 
   <div class="piano hidden" id="piano_emociones">
     <h1>Canciones en Sintonía </h1>
-    <h2>El Universo Emocional con Fito Páez como Guía</h2>
+    <h2>Encontrá la playlist de Fito Paez ideal para vos</h2>
   <div class="wrapper3">
     <div class="header3">
       <h2>¿Cual tecla representa mejor tu estado de ánimo?</h2>
@@ -37,7 +37,7 @@
       <li class="key black" data-key="t"></li>
       <li class="key white" data-key="e" onclick="showGraph('canciones4')" id="btn_canciones4" value="canciones4"><span>😭</span></li>
       <li class="key black" data-key="y"></li>
-      <li class="key white" data-key="i" onclick="showGraph('canciones5')" id="btn_canciones5" value="canciones5"><span>💔</span></li>
+      <li class="key white" data-key="i" onclick="showGraph('canciones5')"  id="btn_canciones5" value="canciones5"><span>💔</span></li>
       <li class="key black" data-key="u"></li>
       <li class="key white" data-key="g"  onclick="showGraph('canciones6')" id="btn_canciones6" value="canciones6"><span>🥳</span></li>
       <li class="key white" data-key="h"  onclick="showGraph('canciones')" id="btn_canciones" value="canciones"><span>😡</span></li>
@@ -56,7 +56,7 @@
     <button type="button" onclick="mostrarPiano()"><i class="home_i fas fa-home"></i></button>
   </div>
   <div class="canciones">
-    <h2>La Playlist para el <span style="color: red;">enojo</span> es:</h2>
+    <h2>La Playlist para el <span style="color: #ff6316;">enojo</span> es:</h2>
     <div class="image-grid">
       <div class="image-container_roto">
         <button type="button" onclick="showGraph2('1')" id="btn_1" value="canciones">
@@ -154,7 +154,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1998</h4>
         <h4>Disco: Enemigos Intimos</h4>
       </div>
     </div>
@@ -174,8 +174,8 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
-        <h4>Disco: Enemigos Intimos</h4>
+        <h4>Año: 1992</h4>
+        <h4>Disco: El Amor Despues del Amor</h4>
       </div>
     </div>
   </div>
@@ -194,7 +194,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 2023</h4>
         <h4>Disco: EADDA9223</h4>
       </div>
     </div>
@@ -214,7 +214,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1985</h4>
         <h4>Disco: Giros</h4>
       </div>
     </div>
@@ -234,42 +234,44 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
-        <h4>Disco: Giros</h4>
+        <h4>Año: 2000</h4>
+        <h4>Disco: Rey Sol</h4>
       </div>
     </div>
   </div>
 </div>
 
+<p>¡Bienvenido a tu playlist! Descubre las canciones seleccionadas para tu estado de animo de hoy. Explora su popularidad en la historia de su música y ponete en sintonía con Fito Páez.</p>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  <div class="graf">
-    <div class="graficos">
-    <div id="chart"></div>
+<div class="populares">
+  <div id="chart_3"></div>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+<script src="graficos_enojo/script_p_enojo.js" defer></script>
+</div>
+
+<p>Descubrí la playlist definitiva para liberar tu enojo. En esta selección musical, encontrarás canciones cuidadosamente escogidas con un alto nivel de intensidad y actividad medidas por la variable energy. Estas canciones enérgicas te harán sentir la rapidez, fuerza y el ruido necesario para canalizar tu enojo. ¡Prepárate para dejarte llevar por la música y liberarte como nunca antes al ritmo de la energía de Fito!</p>
+
+  <div class="botonesgraf">
+  <button type="button" onclick="showgrafico('1')" id="btn_1" value="chart">This Is Fito</button>
+  <button type="button" onclick="showgrafico('2')" id="btn_2" value="chart">Enojo</button>
+  </div>
+
+    <div class="graficos visible" id="chart_1">
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-    <script src="script1.js" defer></script>
+    <script src="graficos_enojo/script1hola.js" defer></script>
 
-    <h1> </h1>
-    <div id="chart2"></div>
+    
+    <div class="graficos hidden" id="chart_2">
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-    <script src="script2.js" defer></script>
+    <script src="graficos_enojo/script2.js" defer></script>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  
 
-    <div id="chart3"></div>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-    <script src="script12.js" defer></script>
-
-    <div id="chart4"></div>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-    <script src="script22.js" defer></script>
 
   </div>
 
@@ -283,9 +285,11 @@
 <div class="piano hidden" id="piano_canciones2">
   <div class="banner">
     <h1>😁</h1>
+    <button type="button" onclick="mostrarPiano()"><i class="home_i fas fa-home"></i></button>
+
   </div>
   <div class="canciones">
-    <h2>La Playlist que transmite <span style="color: rgb(0, 186, 53);">felicidad</span> es: </h2>
+    <h2>La Playlist que transmite <span style="color: #FFE842;">felicidad</span> es: </h2>
     <div class="image-grid">
       <div class="image-container feliz">
         <button type="button" onclick="showGraph2('12')" id="btn_12" value="canciones">
@@ -363,7 +367,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1990</h4>
         <h4>Disco: Tercer Mundo</h4>
       </div>
     </div>
@@ -383,7 +387,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1992</h4>
         <h4>Disco: El amor despues del amor </h4>
       </div>
     </div>
@@ -404,7 +408,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1996</h4>
         <h4>Disco: Euforia </h4>
       </div>
     </div>
@@ -424,7 +428,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1999</h4>
         <h4>Disco: Abre </h4>
       </div>
     </div>
@@ -444,7 +448,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1994</h4>
         <h4>Disco: Circo Beat </h4>
       </div>
     </div>
@@ -464,24 +468,42 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1994</h4>
         <h4>Disco: Circo Beat</h4>
       </div>
     </div>
   </div>
 </div>
+<p>¡Bienvenido a tu playlist! Descubre las canciones seleccionadas para tu estado de animo de hoy. Explora su popularidad en la historia de su música y ponete en sintonía con Fito Páez.</p>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  <div class="graf">
-    <div class="graficos">
-    <div id="chart"></div>
+<div class="populares">
+  <div id="chart_32"></div>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+<script src="graficos_feliz/script_p_feliz.js" defer></script>
+</div>
+
+<p>Descubre la mejor playlist para escuchar cuando estés feliz. En esta selección, encontrarás canciones que te harán vibrar con su intensidad. Las enérgicas se sienten rápidas, fuertes y ruidosas, dándote el impulso perfecto para disfrutar de cada momento al máximo. ¡Sumérgete en esta experiencia musical y dale alegría a tu corazón!</p>
+
+<div class="botonesgraf">
+  <button type="button" onclick="showgrafico('12')" id="btn_12" value="chart">This Is Fito</button>
+  <button type="button" onclick="showgrafico('22')" id="btn_22" value="chart">Feliz</button>
+  </div>
+
+    <div class="graficos visible" id="chart_12">
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-  </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  
+    <script src="graficos_feliz/script1_feliz.js" defer></script>
+
+    
+    <div class="graficos hidden" id="chart_22">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="graficos_feliz/script2_feliz.js" defer></script>
+
 </div>
 
 </div>
@@ -490,10 +512,12 @@
 <div class="piano hidden" id="piano_canciones3">
   <div class="banner">
     <h1>🥰</h1>
+    <button type="button" onclick="mostrarPiano()"><i class="home_i fas fa-home"></i></button>
+
   </div>
   <div class="canciones">
     <!--<button type="button" onclick="showGraph('emociones')" id="btn_emociones" value="emociones">aca</button>-->
-    <h2>Playlist si estas <spam style="color: rgb(223, 110, 206);">enamorado/a</spam> es:</h2>
+    <h2>Playlist si estas <spam style="color: #f887c7;">enamorado/a</spam> es:</h2>
     <div class="image-grid">
       <div class="image-container_enamorado">
         <button type="button" onclick="showGraph2('13')" id="btn_13" value="canciones">
@@ -572,7 +596,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1985</h4>
         <h4>Disco: Giros </h4>
       </div>
     </div>
@@ -592,7 +616,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1992</h4>
         <h4>Disco: El amor despues del amor</h4>
       </div>
     </div>
@@ -612,7 +636,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1999</h4>
         <h4>Disco: Abre </h4>
       </div>
     </div>
@@ -632,7 +656,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1992</h4>
         <h4>Disco: El amor despues del amor </h4>
       </div>
     </div>
@@ -652,7 +676,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 2020</h4>
         <h4>Sencillo. Feat: Conociendo Rusia</h4>
       </div>
     </div>
@@ -672,24 +696,45 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 2017</h4>
         <h4>Disco: La Ciudad Liberada</h4>
       </div>
     </div>
   </div>
 </div>
+<p>¡Bienvenido a tu playlist! Descubre las canciones seleccionadas para tu estado de animo de hoy. Explora su popularidad en la historia de su música y ponete en sintonía con Fito Páez.</p>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  <div class="graf">
-    <div class="graficos">
-    <div id="chart"></div>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-  </div>
+
+<div class="populares">
+  <div id="chart_31"></div>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+<script src="graficos_enamorado/script_p_enamorado.js" defer></script>
 </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+
+<p>Descubre la playlist perfecta para escuchar cuando estés enamorado. Esta es la mejor selección de canciones que capturan la esencia del amor. Estas canciones fueron elegidas por su alta probabilidad de danceabilidad. Prepárate para moverte al ritmo de estas melodías y descubre lo adecuada que es cada pista para disfrutar del amor. ¡Sumérgete en esta experiencia musical única y déjate llevar por el amor y el ritmo de Fito!</p>
+
+  <div class="botonesgraf">
+    <button type="button" onclick="showgrafico('11')" id="btn_11" value="chart">This Is Fito</button>
+    <button type="button" onclick="showgrafico('21')" id="btn_21" value="chart">Enamorado</button>
+    </div>
+  
+      <div class="graficos visible" id="chart_11">
+      </div>
+  
+      <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+      <script src="graficos_enamorado/script1_enamorado.js" defer></script>
+  
+      
+      <div class="graficos hidden" id="chart_21">
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+      <script src="graficos_enamorado/script2_enamorado.js" defer></script>
+
+
+  </div>
   
 </div>
 
@@ -699,9 +744,11 @@
 <div class="piano hidden" id="piano_canciones4">
   <div class="banner">
     <h1>😭</h1>
+    <button type="button" onclick="mostrarPiano()"><i class="home_i fas fa-home"></i></button>
+
   </div>
   <div class="canciones">
-    <h2>La Playlist si estas <spam style="color: rgb(85, 183, 240);">triste - melancolico/a</spam> es:</h2>
+    <h2>La Playlist si estas <spam style="color: #4FAADE;">triste - melancolico/a</spam> es:</h2>
     <div class="image-grid">
       <div class="image-container_triste">
         <button type="button" onclick="showGraph2('14')" id="btn_14" value="canciones">        
@@ -779,7 +826,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1999</h4>
         <h4>Disco: Abre</h4>
       </div>
     </div>
@@ -799,7 +846,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1985</h4>
         <h4>Disco: Giros</h4>
       </div>
     </div>
@@ -820,7 +867,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1990</h4>
         <h4>Disco: Tercer Mundo </h4>
       </div>
     </div>
@@ -840,7 +887,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1992</h4>
         <h4>Disco: El amor despues del amor </h4>
       </div>
     </div>
@@ -860,7 +907,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1985 </h4>
         <h4>Disco: Giros</h4>
       </div>
     </div>
@@ -880,23 +927,40 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1992</h4>
         <h4>Disco: El Amor despues del Amor</h4>
       </div>
     </div>
   </div>
 </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  <div class="graf">
-    <div class="graficos">
-    <div id="chart"></div>
+
+<p>¡Bienvenido a tu playlist! Descubre las canciones seleccionadas para tu estado de animo de hoy. Explora su popularidad en la historia de su música y ponete en sintonía con Fito Páez.</p>
+
+<div class="populares">
+  <div id="chart_33"></div>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+<script src="graficos_llorar/script_p_llorar.js" defer></script>
+</div>
+<p>Descubre la playlist perfecta para esos momentos tristes. Con una selección cuidadosa de canciones en base a su tempo bajo. Permítete sumergirte en la música de Fito y deja que sus melodías suaves y emotivas te abracen en esos momentos difíciles. ¡Esta es la mejor playlist para escuchar cuando estés triste!</p>
+<div class="botonesgraf">
+  <button type="button" onclick="showgrafico('13')" id="btn_13" value="chart">This Is Fito</button>
+  <button type="button" onclick="showgrafico('23')" id="btn_23" value="chart">Triste</button>
+  </div>
+
+    <div class="graficos visible" id="chart_13">
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-  </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  
+    <script src="graficos_llorar/script1_triste.js" defer></script>
+
+    
+    <div class="graficos hidden" id="chart_23">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="graficos_llorar/script2_triste.js" defer></script>  
 </div>
 
 </div>
@@ -905,11 +969,13 @@
 <div class="piano hidden" id="piano_canciones5">
   <div class="banner">
     <h1>💔</h1>
+    <button type="button" onclick="mostrarPiano()"><i class="home_i fas fa-home"></i></button>
+
   </div>
   <div class="canciones">
-    <h2>Para <spam style="color: rgb(227, 26, 36);">corazones rotos</spam> la Playlist recomendada es:</h2>
+    <h2>Para <spam style="color: #FF0000;">corazones rotos</spam> la Playlist recomendada es:</h2>
     <div class="image-grid">
-      <div class="image-container_roto">
+      <div class="image-container_enojado">
         <button type="button" onclick="showGraph2('15')" id="btn_15" value="canciones">        
           <div class="card">
             <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Giros_1985_Fito_Paez.jpg">
@@ -919,7 +985,7 @@
         </button>
       </div>
 
-      <div class="image-container_roto">
+      <div class="image-container_enojado">
         <button type="button" onclick="showGraph2('25')" id="btn_25" value="canciones">        
           <div class="card">
             <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
@@ -929,7 +995,7 @@
         </button>
       </div>
     
-      <div class="image-container_roto">
+      <div class="image-container_enojado">
         <button type="button" onclick="showGraph2('35')" id="btn_35" value="canciones"> 
           <div class="card">
             <img src="https://www.rionegro.com.ar/wp-content/uploads/2023/06/o_1685547103.jpg">
@@ -939,7 +1005,7 @@
         </button>
       </div>
 
-      <div class="image-container_roto">
+      <div class="image-container_enojado">
         <button type="button" onclick="showGraph2('45')" id="btn_45" value="canciones">        
           <div class="card">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Fitopaez_del63.jpg">
@@ -949,7 +1015,7 @@
         </button>
       </div>
 
-      <div class="image-container_roto">
+      <div class="image-container_enojado">
         <button type="button" onclick="showGraph2('55')" id="btn_55" value="canciones">        
           <div class="card">
             <img src="https://m.media-amazon.com/images/I/810NI2wLC6L._UF1000,1000_QL80_.jpg">
@@ -959,7 +1025,7 @@
         </button>
       </div>
 
-      <div class="image-container_roto">
+      <div class="image-container_enojado">
         <button type="button" onclick="showGraph2('65')" id="btn_65" value="canciones">        
           <div class="card">
             <img src="https://m.media-amazon.com/images/I/81dIl26xqeL._UF894,1000_QL80_.jpg">
@@ -985,7 +1051,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1985 </h4>
         <h4>Disco: Giros </h4>
       </div>
     </div>
@@ -1005,7 +1071,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1990</h4>
         <h4>Disco: Tercer mundo</h4>
       </div>
     </div>
@@ -1025,7 +1091,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 2023</h4>
         <h4>Disco: EADDA9223 </h4>
       </div>
     </div>
@@ -1045,7 +1111,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1984</h4>
         <h4>Disco: Del 63 </h4>
       </div>
     </div>
@@ -1065,7 +1131,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 2007</h4>
         <h4>Disco: Rodolfo</h4>
       </div>
     </div>
@@ -1085,20 +1151,43 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 2021</h4>
         <h4>Disco: Los Años Salvajesr</h4>
       </div>
     </div>
   </div>
 </div>
+ 
+<p>¡Bienvenido a tu playlist! Descubre las canciones seleccionadas para tu estado de animo de hoy. Explora su popularidad en la historia de su música y ponete en sintonía con Fito Páez.</p>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  <div class="graf">
-  <img src="https://www.zohowebstatic.com/sites/default/files/column-chart.jpg">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  
+
+<div class="populares">
+  <div id="chart_34"></div>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+<script src="graficos_roto/script_p_roto.js" defer></script>
+</div>
+
+<p>Descubre la mejor playlist para esos momentos en los que el corazón está roto. En esta selección de canciones, podrás encontrar un tempo suave y melancólico que te acompañará en esos momentos difíciles. Sumérgete en la música de Fito y siente el consuelo que brinda en cada acorde. Déjate envolver por las emociones y encuentra paz en las letras que comprenden tus sentimientos. Bienvenido a la playlist que te acompaña cuando más lo necesitas</p>
+
+<div class="botonesgraf">
+  <button type="button" onclick="showgrafico('14')" id="btn_14" value="chart">This Is Fito</button>
+  <button type="button" onclick="showgrafico('24')" id="btn_24" value="chart">Corazon Roto</button>
+  </div>
+
+    <div class="graficos visible" id="chart_14">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="graficos_roto/script1_roto.js" defer></script>
+
+    
+    <div class="graficos hidden" id="chart_24">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="graficos_roto/script2_roto.js" defer></script>  
 </div>
 
 </div>
@@ -1107,12 +1196,14 @@
   <h1> </h1>
   <div class="banner">
     <h1>🥳</h1>
+    <button type="button" onclick="mostrarPiano()"><i class="home_i fas fa-home"></i></button>
+
   </div>
   <div class="canciones">
-    <h2>Si queres  <spam style="color: rgb(167, 26, 227);">bailar</spam> la Playlist recomendada es:</h2>
+    <h2>Si queres  <spam style="color: #8f00ff;">bailar</spam> la Playlist recomendada es:</h2>
     <div class="image-grid">
       <div class="image-container_fiesta">
-        <button type="button" onclick="showGraph2('16')" id="btn_2" value="canciones">        
+        <button type="button" onclick="showGraph2('16')" id="btn_16" value="canciones">        
           <div class="card">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/El_amor_despues_delamor_tapa.jpg">
             <h2>A Rodar mi Vida</h2>
@@ -1122,7 +1213,7 @@
       </div>
 
       <div class="image-container_fiesta">
-        <button type="button" onclick="showGraph2('26')" id="btn_2" value="canciones">        
+        <button type="button" onclick="showGraph2('26')" id="btn_26" value="canciones">        
           <div class="card">
             <img src="https://i.discogs.com/bP-aZGpdUCeydL3QRnhu3Q3ldoQvXl7q54TfSLH8Mb4/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM4Nzkz/NzAtMTQ3MTQ5Njcw/NS02MzQ2LmpwZWc.jpeg">
             <h2>Dos días en la Vida</h2>
@@ -1132,7 +1223,7 @@
       </div>
 
       <div class="image-container_fiesta">
-        <button type="button" onclick="showGraph2('36')" id="btn_2" value="canciones"> 
+        <button type="button" onclick="showGraph2('36')" id="btn_36" value="canciones"> 
           <div class="card">
             <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/Circo_Beat_Album_Cover.jpg">
             <h2>Circo Beat</h2>
@@ -1142,7 +1233,7 @@
       </div>
 
       <div class="image-container_fiesta">
-        <button type="button" onclick="showGraph2('46')" id="btn_2" value="canciones">        
+        <button type="button" onclick="showGraph2('46')" id="btn_46" value="canciones">        
           <div class="card">
             <img src="https://is2-ssl.mzstatic.com/image/thumb/Music124/v4/8c/0a/78/8c0a785e-0217-e678-4828-17a42985df32/195497237494.jpg/600x600bf-60.jpg">
             <h2>Tu Encanto</h2>
@@ -1152,7 +1243,7 @@
       </div>
 
       <div class="image-container_fiesta">
-        <button type="button" onclick="showGraph2('56')" id="btn_2" value="canciones">        
+        <button type="button" onclick="showGraph2('56')" id="btn_56" value="canciones">        
           <div class="card">
             <img src="https://i.discogs.com/P6cVvmkcs0FhfqlBAxPjpAlOvioRrUXm1WJcd5OwRkU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzc1/NDAzLTE2MjAzMzU0/MDctNjExNy5qcGVn.jpeg">
             <h2>Dale Alegría a mi Corazón</h2>
@@ -1187,7 +1278,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1992</h4>
         <h4>Disco: El Amor despues del Amor</h4>
       </div>
     </div>
@@ -1207,7 +1298,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1999</h4>
         <h4>Disco: Abre</h4>
       </div>
     </div>
@@ -1228,7 +1319,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1994</h4>
         <h4>Disco: Circo Beat </h4>
       </div>
     </div>
@@ -1248,7 +1339,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 2020</h4>
         <h4>Sencillo. Feat: Conociendo Rusia </h4>
       </div>
     </div>
@@ -1268,7 +1359,7 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1990</h4>
         <h4>Disco: Tercer Mundo</h4>
       </div>
     </div>
@@ -1288,24 +1379,41 @@
         </div>
         <button type="button" class="button play" onclick="toggleAudio()">| |</button>
         <button type="button" class="button pause" onclick="toggleAudio()">Play</button>
-        <h4>Año: </h4>
+        <h4>Año: 1985</h4>
         <h4>Disco: Giros</h4>
       </div>
     </div>
   </div>
 </div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  <div class="graf">
-    <div class="graficos">
-    <div id="chart"></div>
+<p>¡Bienvenido a tu playlist! Descubre las canciones seleccionadas para tu estado de animo de hoy. Explora su popularidad en la historia de su música y ponete en sintonía con Fito Páez.</p>
+
+<div class="populares">
+  <div id="chart_35"></div>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+<script src="graficos_fiesta/script_p_fiesta.js" defer></script>
+</div>
+
+<p>Te presentamos la playlist definitiva para tus fiestas. Esta selección de canciones ha sido cuidadosamente elegida para ofrecerte una experiencia llena de dviersión. Notarás que cada pista ha sido elegida por su alta probabilidad de hacerte bailar. Así que prepárate para dejarte llevar al compas de Fito.</p>
+<div class="botonesgraf">
+  <button type="button" onclick="showgrafico('15')" id="btn_15" value="chart">This Is Fito</button>
+  <button type="button" onclick="showgrafico('25')" id="btn_25" value="chart">Fiesta</button>
+  </div>
+
+    <div class="graficos visible" id="chart_15">
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
-  </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
-  
+    <script src="graficos_fiesta/script1_fiesta.js" defer></script>
+
+    
+    <div class="graficos hidden" id="chart_25">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="graficos_fiesta/script2_fiesta.js" defer></script> 
 </div>
 
 </div>
@@ -1365,6 +1473,21 @@
       element.scrollIntoView({ behavior: 'smooth' },true);
   }
 
+     function showgrafico(btn){
+
+        Array.prototype.slice.call(document.getElementsByClassName("graficos")).forEach((m)=>{
+          m.classList.remove("visible")
+          m.classList.add("hidden")
+        })
+    
+        var id_mapa = "chart_" + btn
+        var miMapa = document.getElementById(id_mapa)
+        
+        miMapa.classList.remove("hidden")
+        miMapa.classList.add("visible")
+      } 
+
+
   function playAudio() {
     audio.play();
   }
@@ -1397,6 +1520,8 @@
     //   audio.volume = volumeRange.value;
     // });
   });
+
+  
   
   </script>
 </body>

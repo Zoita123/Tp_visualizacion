@@ -35,6 +35,7 @@ body {
   background: transparent;
   transition: 0.7s;
   align-items: center;
+  margin-top: 17%;
 }
 
 .contenedor button i{
@@ -47,12 +48,12 @@ body {
 }
 
 .contenedor button.play{
-  border: 3px solid rgb(3, 171, 64);
-  color: rgb(3, 158, 36);
+  border: 3px solid rgb(251, 251, 251);
+  color: #e4f3e7;
 }
 
 .contenedor button.play:hover{
-  box-shadow: 0px 0px 100px 8px rgb(4, 179, 68);
+  box-shadow: 0px 0px 200px 20px rgb(243, 247, 244);
 }
 
 h1{
@@ -75,7 +76,7 @@ h2{
 
 p{
   text-align: justify;
-  margin-left: 20%;
+  margin-left: 7.5%;
   margin-right: 20%;
   margin-bottom: 3%;
   color: white;
@@ -313,8 +314,13 @@ p{
 
 .visible{
   display: block;
-  animation: appear 1s ease-in-out;
 }
+
+.graficos .visible{
+  display: block;
+  animation: none;
+}
+
 
 @keyframes appear {
   from {
@@ -523,7 +529,7 @@ p{
 }
 
 .canciones  .image-container:hover  {
-  box-shadow: 0px 0px 15px 8px #4CAF50;
+  box-shadow: 0px 0px 15px 8px #FFE842;
   border-radius: 3px;
 }
 
@@ -574,7 +580,7 @@ p{
 }
 
 .canciones  .image-container_enamorado:hover  {
-  box-shadow: 0px 0px 15px 8px #e282e8;
+  box-shadow: 0px 0px 15px 8px #f887c7;
   border-radius: 3px;
 }
 
@@ -627,7 +633,7 @@ p{
 
 
 .canciones  .image-container_triste:hover  {
-  box-shadow: 0px 0px 15px 8px #4d9bf4;
+  box-shadow: 0px 0px 15px 8px #4FAADE;
   border-radius: 3px;
 }
 
@@ -680,7 +686,7 @@ p{
 
 
 .canciones  .image-container_roto:hover  {
-  box-shadow: 0px 0px 15px 8px #dd1f1f;
+  box-shadow: 0px 0px 15px 8px #ff6316;
   border-radius: 3px;
 }
 
@@ -732,7 +738,7 @@ p{
 }
 
 .canciones  .image-container_fiesta:hover  {
-  box-shadow: 0px 0px 15px 8px #a218e7;
+  box-shadow: 0px 0px 15px 8px #8f00ff;
   border-radius: 3px;
 }
 
@@ -869,12 +875,101 @@ span{
 }
 
 .graficos {
-  margin-top: 5%;
-  color: rgb(238, 92, 92);
+  margin-top: 2%;
+  color: rgb(175, 170, 170);
   margin-bottom: 2%;
-  margin-left: 20%;
+  margin-left: 19%;
 }
 
 .graficos p{
   margin-left: 1%;
+}
+
+
+.canciones  .image-container_enojado {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.canciones  .image-container_enojado button{
+  background: none;
+  border: none;
+}
+
+.canciones  .image-container_enojado img {
+  width: 100%;
+  border-radius: 3px;
+  margin: none;
+  height: auto;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.canciones  .image-container_enojado h2{
+  font-family: "Rubik";
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 17px;
+  margin-left: 2px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+.canciones  .image-container_enojado p{
+  font-family: "Rubik";
+  font-size: 15px;
+  color: #b3b3b3;
+  font-weight: 400;
+  line-height: 0.8;
+  margin-left: 2px;
+  overflow: hidden;
+  text-align: left;
+}
+
+
+.canciones  .image-container_enojado:hover  {
+  box-shadow: 0px 0px 15px 8px #FF0000;
+  border-radius: 3px;
+}
+
+.canciones  .image-container_enojado:hover img {
+  transform: translateY(-5px);
+}
+
+.botonesgraf button{
+  background-color:transparent;
+  margin-left: 5%;
+  border-color: white;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 400px;
+  transition: 0.7s;
+}
+
+.botonesgraf{
+  margin-left: 38%;
+  margin-top: 5%;
+}
+
+
+.botonesgraf button:hover{
+  box-shadow: 0px 0px 80px 10px #fffcfa;
+}
+
+p{
+  width: 85%;
+}
+
+.populares {
+  margin-top: 2%;
+  color: rgb(175, 170, 170);
+  margin-bottom: 2%;
+  margin-left: 25%;
 }

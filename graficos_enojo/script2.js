@@ -1,10 +1,13 @@
-d3.dsv(";", "fitofiltradoenojo.csv", d3.autoType).then((data) => {
-  // Multiplicar los valores de "energy" por 5
+d3.dsv(",", "data/thisisfito.csv", d3.autoType).then((data) => {
+  let filteredData = data.filter(d => d.estado === "enojo");
+
+  let xDomain = d3.extent(data, d => d.popularity);
+  let yDomain = d3.extent(data, d => d.energy);
 
   // Generar la visualización del gráfico
   let chart = Plot.plot({
     marks: [
-      Plot.dot(data, {
+      Plot.dot(filteredData, {
         x: "popularity",
         y: "energy",
         stroke: "#ff6316",
@@ -12,7 +15,7 @@ d3.dsv(";", "fitofiltradoenojo.csv", d3.autoType).then((data) => {
         channels: { name: "song", album: "album" },
         tip: true,
       }),
-      Plot.crosshair(data, {
+      Plot.crosshair(filteredData, {
         x: "popularity",
         y: "energy",
         color: "album",
@@ -22,8 +25,10 @@ d3.dsv(";", "fitofiltradoenojo.csv", d3.autoType).then((data) => {
     width: 800,
     height: 500,
     grid: true,
+    x: { domain: xDomain, nice: true },
+    y: { domain: yDomain, nice: true },
   });
 
   // Agregar el gráfico al div#chart de index.html
-  d3.select("#chart2").append(() => chart).style("background-color", "#080808");
+  d3.select("#chart_2").append(() => chart).style("background-color", "#080808");
 });

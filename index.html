@@ -9,13 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <script src="script.js" defer></script>
-
+  <script src="https://unpkg.com/scrollama"></script>
 </head>
 
 <body>
   <div class="piano visible">
     <h1>Encontrá la playlist de Fito Paez ideal para vos</h1>
-    <!-- <img src="https://media.ambito.com/p/b45bfbc36cbaaf35a15d4993c543ca00/adjuntos/239/imagenes/040/741/0040741353/1200x675/smart/fito-paezjpg.jpg"> -->
     <div class="contenedor">
       <button class="play" onclick="mostrarPiano()"><i class="fas fa-play"></i></button>
     </div>
@@ -24,7 +23,6 @@
   <div class="piano hidden" id="piano_emociones">
     <h1>Canciones en Sintonía </h1>
     <h2>El Universo Emocional con Fito Páez como Guía</h2>
-    <p>¡Bienvenido a nuestra página web de música emocional! Elige una emoción en nuestro teclado interactivo y te proporcionaremos una playlist personalizada que se ajuste a tu estado de ánimo. Descubre la música perfecta para cada momento de tu vida. ¡Disfruta de una experiencia auditiva emocionante y única!</p>
   <div class="wrapper3">
     <div class="header3">
       <h2>¿Cual tecla representa mejor tu estado de ánimo?</h2>
@@ -55,7 +53,7 @@
 <div class="piano hidden" id="piano_canciones">
   <div class="banner">
     <h1>😡</h1>
-    <button type="button" onclick="mostrarPiano()"><i class="fas fa-home"></i></button>
+    <button type="button" onclick="mostrarPiano()"><i class="home_i fas fa-home"></i></button>
   </div>
   <div class="canciones">
     <h2>La Playlist para el <span style="color: red;">enojo</span> es:</h2>
@@ -253,18 +251,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="script1.js" defer></script>
 
-  </div>
-
-  <div class="graf">
-    <div class="graficos">
+    <h1> </h1>
     <div id="chart2"></div>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="script2.js" defer></script>
 
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+  
+
+    <div id="chart3"></div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="script12.js" defer></script>
+
+    <div id="chart4"></div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+    <script src="script22.js" defer></script>
+
   </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.</p>
+
   
 </div>
 
@@ -1382,11 +1390,12 @@
     progressInput.value = progress;
     requestAnimationFrame(updateProgressBar);
   }
+  document.addEventListener("DOMContentLoaded", () => {
+    // var volumeRange = document.getElementById(".volumeRange");
 
-  var volumeRange = document.getElementById("volumeRange");
-
-  volumeRange.addEventListener("input", function() {
-  audio.volume = volumeRange.value;
+    // volumeRange.addEventListener("input", function() {
+    //   audio.volume = volumeRange.value;
+    // });
   });
   
   </script>

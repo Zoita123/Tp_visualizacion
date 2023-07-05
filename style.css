@@ -815,14 +815,14 @@ span{
   padding: 10px;
   text-align: center;
   z-index: 9999;
-  height: 20%;
+  height: 10%;
   margin-top: 10px;
 }
 
 .banner h1{
   text-align: left;
   position: fixed;
-  margin-left: 20px;
+  margin-left: 5%;
   background-color: transparent;
   padding: 10px;
   margin-top: -1%;
@@ -830,16 +830,18 @@ span{
 
 .banner button{
   margin-left: 80%;
+  margin-top: 1%;
   color: white;
   text-align: right;
   background-color: transparent;
   outline: none;
+  border: #000;
 }
 
-.banner button i{
-  width: 60px;
-  height: 60px;
+.home_i{
+  font-size: 35px;
 }
+
 
 .sidebar {
   position: fixed;
@@ -871,4 +873,8 @@ span{
   color: rgb(238, 92, 92);
   margin-bottom: 2%;
   margin-left: 20%;
+}
+
+.graficos p{
+  margin-left: 1%;
 }

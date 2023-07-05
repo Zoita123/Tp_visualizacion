@@ -6,7 +6,7 @@ d3.dsv(";", "fitofiltradoenojo.csv", d3.autoType).then((data) => {
     marks: [
       Plot.dot(data, {
         x: "popularity",
-        y: "energy",
+        y: "tempo",
         stroke: "#ff6316",
         r: 10,
         channels: { name: "song", album: "album" },
@@ -14,7 +14,7 @@ d3.dsv(";", "fitofiltradoenojo.csv", d3.autoType).then((data) => {
       }),
       Plot.crosshair(data, {
         x: "popularity",
-        y: "energy",
+        y: "tempo",
         color: "album",
         opacity: 0.5,
       }),
@@ -25,5 +25,5 @@ d3.dsv(";", "fitofiltradoenojo.csv", d3.autoType).then((data) => {
   });
 
   // Agregar el gráfico al div#chart de index.html
-  d3.select("#chart2").append(() => chart).style("background-color", "#080808");
+  d3.select("#chart4").append(() => chart).style("background-color", "#080808");
 });

@@ -1,51 +1,51 @@
-song,album,popularity,danceability,acousticness,loudness,tempo,energy
-Andar Conmigo,Lo dije por boca de otro,43,619,0.46,-10.29,129.914,498
-Si es Amor,Rodolfo,48,0.36,884,-10.815,131.275,317
-11 y 6,No se si es Baires o Madrir,48,475,961,-8.928,106.151,423
-Los años salvajes (Feat. Fabiana Cantilo),Los años salvajes,50,352,0.0111,-5.973,115.502,913
-Confia,Confia,48,601,429,-7.016,95.925,812
-Naturaleza Sangre,Naturaleza Sangre,48,451,0.000807,-4,136.29,944
-Babel,Babel,49,607,0.0782,-3.796,118.022,0.91
-Por tu amor,De plaza en plaza,46,573,217,-5.336,83.003,571
-Un Beso y Una Flor,Canciones para aliens,51,342,0.71,-6.491,86.479,653
-El amor despues del amor,Esto si es cumbia,50,763,134,-5.069,96.993,623
-Cadaver Exquisito,Euforia,51,365,147,-11.653,178.1,863
-Ambar Violeta,Ciudad de pobre corazones,50,637,861,-19.028,107.349,268
-Parte del Aire,La La La,51,519,354,-15.721,208.649,0.29
-Volver a mi,Naturaleza Sangre,48,586,0.0121,-5.631,114.876,803
-Alguna vez voy a ser libre,Giros,52,742,281,-16.146,107.386,289
-El diablo de tu corazon,Rey Sol,51,613,0.0535,-5.052,103.994,921
-Detras del muro de los lamentos,EADDA9223,54,523,896,-9.093,80.106,0.59
-11 y 6,Giros,75,0.0756,0.0756,-16.922,101.3,325
-Mariposa Tecnicolor,circo beat,73,509,183,-6.647,145.088,887
-El amor despues del amor,El amor despues del amor,72,641,0.00357,-6.536,94.884,797
-Polaroid de locura ordinaria,Ey!,67,281,0.00496,-5.219,93.49,819
-Al lado del camino,Abre,67,281,0.00496,-5.219,93.49,819
-Giros,Giros,66,837,132,-14.708,121.872,377
-A rodar mi vida,El amor despues del amor,68,672,0.00379,-8.143,124.854,837
-Dar es dar,Euforia,63,635,0.0205,-8.769,103.022,632
-Dos en la ciudad,Abre,63,536,112,-7.98,89.984,707
-Cable A tierra,Giros,63,349,826,-16.393,79.51,215
-Tumbas de gloria,El amor despues del amor,66,526,0.0583,-9.66,112.298,611
-Fue amor,Tercer mundo,62,648,208,-8.692,117.835,735
-Dos dias en la vida,Abre,66,536,112,-7.98,89.984,707
-Yo vengo a ofrecer mi corazón,Giros,59,817,195,-16.657,119.616,204
-La rueda magica,El amor despues del amor,63,631,0.0177,-7.515,118.041,807
-Circo Beat,Circo Beat,60,692,0.0823,-7.991,124.139,741
-Sasha, Sissi y el Círculo de Baba,EADDA9223,61,585,0.19,-7.959,106.892,0.73
-Tu Vida Mi Vida,La Ciudad Liberada,57,735,134,-14.276,115.988,543
-Pétalo de Sal,El amor después del amor,62,267,821,-14.301,65.265,306
-Tu encanto,Tu encanto,56,571,0.0489,-4.222,122.061,939
-Llueve sobre mojado,Enemigos intimos,57,0.34,235,-4.164,201.547,873
-Tráfico por Katmandú,EADDA9223,57,668,101,-7.004,106.021,914
-Brillante sobre el Mic,El amor después del amor,63,645,176,-9.767,105.833,507
-Y dale alegría a mi corazón,Tercer Mundo,60,618,671,-11.324,77.857,367
-Ciudad de Pobres corazones,Ciudad de pobres corazones,59,574,366,-7.221,99.691,628
-La veronica,EADDA9223,59,0.42,842,-12.175,102.956,273
-Bello Abril,Naturaleza Sangre,53,433,379,-10.492,97.966,483
-Tres Agujas,Del 63,56,714,0.2,-15.806,128.856,396
-Tema de Piluso,Circo Beat,54,555,312,-6.567,118.143,0.79
-La balada de Donna Helena,EADDA9223,58,338,654,-5.99,85.528,795
-Taquicardia,Giros,54,522,0.00635,-11.544,107.156,828
-Gente en la calle (ft. Lali),La conquista del espacio,51,661,218,-6.939,105,667
-Margarita,Yo te amo,52,542,0.0573,-5.632,109.946,676
+song,album,popularity,danceability,acousticness,loudness,tempo,energy,estado
+Andar Conmigo,Lo dije por boca de otro,43,0.619,0.46,-10.29,129.914,0.498,null
+Si es Amor,Rodolfo,48,0.36,884,-10.815,131.275,0.317,roto
+11 y 6,No se si es Baires o Madrir,48,0.475,961,-8.928,106.151,0.423,enamorado
+Los años salvajes (Feat. Fabiana Cantilo),Los años salvajes,50,0.352,0.0111,-5.973,115.502,0.913,roto
+Confia,Confia,48,0.601,429,-7.016,95.925,0.812,null
+Naturaleza Sangre,Naturaleza Sangre,48,0.451,0.000807,-4,136.29,0.944,null
+Babel,Babel,49,0.607,0.0782,-3.796,118.022,0.91,null
+Por tu amor,De plaza en plaza,46,0.573,217,-5.336,83.003,0.571,null
+Un Beso y Una Flor,Canciones para aliens,51,0.342,0.71,-6.491,86.479,0.653,null
+El amor despues del amor,Esto si es cumbia,50,0.763,134,-5.069,96.993,0.623,enamorado
+Cadaver Exquisito,Euforia,51,0.365,147,-11.653,178.1,0.863,null
+Ambar Violeta,Ciudad de pobre corazones,50,0.637,861,-19.028,107.349,0.268,null
+Parte del Aire,La La La,51,0.19,354,-15.721,208.649,0.29,null
+Volver a mi,Naturaleza Sangre,48,0.586,0.0121,-5.631,114.876,0.803,null
+Alguna vez voy a ser libre,Giros,52,0.742,281,-16.146,107.386,0.289,null
+El diablo de tu corazon,Rey Sol,51,0.613,0.0535,-5.052,103.994,0.921,enojo
+Detras del muro de los lamentos,EADDA9223,54,0.523,896,-9.093,80.106,0.59,null
+11 y 6,Giros,75,0.0756,0.0756,-16.922,101.3,0.325,enamorado
+Mariposa Tecnicolor,circo beat,73,0.509,183,-6.647,145.088,0.887,feliz
+El amor despues del amor,El amor despues del amor,72,0.641,0.00357,-6.536,94.884,0.797,enamorado
+Polaroid de locura ordinaria,Ey!,67,0.281,0.00496,-5.219,93.49,0.819,null
+Al lado del camino,Abre,67,0.281,0.00496,-5.219,93.49,0.819,llorar
+Giros,Giros,66,0.837,132,-14.708,121.872,0.377,fiesta
+A rodar mi vida,El amor despues del amor,68,0.672,0.00379,-8.143,124.854,0.837,fiesta
+Dar es dar,Euforia,63,0.635,0.0205,-8.769,103.022,0.632,feliz
+Dos en la ciudad,Abre,63,0.536,112,-7.98,89.984,0.707,enamorado
+Cable A tierra,Giros,63,0.349,826,-16.393,79.51,0.215,llorar
+Tumbas de gloria,El amor despues del amor,66,0.526,0.0583,-9.66,112.298,0.611,enamorado
+Fue amor,Tercer mundo,62,0.648,208,-8.692,117.835,0.735,llorar
+Dos dias en la vida,Abre,66,0.536,112,-7.98,89.984,0.707,feliz
+Yo vengo a ofrecer mi corazón,Giros,59,0.817,195,-16.657,119.616,0.204,llorar
+La rueda magica,El amor despues del amor,63,0.631,0.0177,-7.515,118.041,0.807,null
+Circo Beat,Circo Beat,60,0.692,0.0823,-7.991,124.139,0.741,fiesta
+Sasha, Sissi y el Círculo de Baba,61,0.585,0.19,-7.959,106.892,0.73,null
+Tu Vida Mi Vida,La Ciudad Liberada,57,0.735,134,-14.276,115.988,0.543,enamorado
+Pétalo de Sal,El amor después del amor,62,0.267,821,-14.301,65.265,0.306,null
+Tu encanto,Tu encanto,56,0.571,0.0489,-4.222,122.061,0.939,enamorado
+Llueve sobre mojado,Enemigos intimos,57,0.34,235,-4.164,201.547,0.873,enojo
+Tráfico por Katmandú,EADDA9223,57,0.668,101,-7.004,106.021,0.914,enojo
+Brillante sobre el Mic,El amor después del amor,63,0.645,176,-9.767,105.833,0.507,llorar
+Y dale alegría a mi corazón,Tercer Mundo,60,0.618,671,-11.324,77.857,0.367,feliz
+Ciudad de Pobres corazones,Ciudad de pobres corazones,59,0.574,366,-7.221,99.691,0.628,enojo
+La veronica,EADDA9223,59,0.42,842,-12.175,102.956,0.273,roto
+Bello Abril,Naturaleza Sangre,53,0.433,379,-10.492,97.966,0.483,null
+Tres Agujas,Del 63,56,0.714,0.2,-15.806,128.856,0.396,roto
+Tema de Piluso,Circo Beat,54,0.555,312,-6.567,118.143,0.79,feliz
+La balada de Donna Helena,EADDA9223,58,0.338,654,-5.99,85.528,0.795,enojo
+Taquicardia,Giros,54,0.522,0.00635,-11.544,107.156,0.828,enojo
+Gente en la calle (ft. Lali),La conquista del espacio,51,0.661,218,-6.939,105,0.667,null
+Margarita,Yo te amo,52,0.542,0.0573,-5.632,109.946,0.676,null

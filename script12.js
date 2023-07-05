@@ -81,7 +81,7 @@ d3.dsv(",", "thisisfito.csv", d3.autoType).then((data) => {
       marks: [
         Plot.dot(data, {
           x: "popularity",
-          y: "energy",
+          y: "tempo",
           stroke: d => d.estado == "feliz" ? "#FFE842" : d.estado == "enojo" ? "#ff6316" : d.estado == "fiesta" ? "#8f00ff" : d.estado == "roto" ? "#FF0000" : d.estado == "llorar" ? "#4FAADE" : d.estado == "enamorado" ? "#f887c7" : "#adadad",
           r: 10,
           channels: { name: "song", album: "album" },
@@ -89,7 +89,7 @@ d3.dsv(",", "thisisfito.csv", d3.autoType).then((data) => {
         }),
         Plot.crosshair(data, {
           x: "popularity",
-          y: "energy",
+          y: "tempo",
           color: "album",
           opacity: 0.5,
         }),
@@ -100,9 +100,5 @@ d3.dsv(",", "thisisfito.csv", d3.autoType).then((data) => {
     });
   
     // Agregar el gráfico al div#chart de index.html
-    d3.select("#chart").append(() => chart).style("background-color", "#080808");
+    d3.select("#chart3").append(() => chart).style("background-color", "#080808");
   });
-
-  const colorScale = d3.scaleOrdinal()
-  .range(["red", "green", "blue"]); // Reemplaza con tus colores
-  
